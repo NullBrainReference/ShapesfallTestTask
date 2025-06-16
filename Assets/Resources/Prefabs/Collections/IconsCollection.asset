@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620ba9b00aaf7e4c9f738b4720c2e3a, type: 3}
+  m_Name: IconsCollection
+  m_EditorClassIdentifier: 
+  _pigSprite: {fileID: -9122695006515159614, guid: de23036c80a16dc468dde4973d42d9f0, type: 3}
+  _dogSprite: {fileID: -3994744024693093290, guid: 386e7314ae6fece4e853ed432de2607a, type: 3}
+  _foxSprite: {fileID: 1791904589581890566, guid: 5921e6358b60f864aa07cacbf67edc21, type: 3}
+  _sheepSprite: {fileID: 3184159518366690391, guid: 1b8b92f5039518f44aa342b20674cbc4, type: 3}
+  _bearSprite: {fileID: 4693792977596894205, guid: af320756a3185074499d4abdf59ee439, type: 3}

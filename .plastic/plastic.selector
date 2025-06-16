@@ -1,0 +1,4 @@
+repository "ShapesfallTestTask/ShapesfallTestTask@10170896354100@cloud"
+  path "/"
+    br "/main"
+    co "/main"
