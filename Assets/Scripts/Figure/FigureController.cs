@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using Zenject;
 
-public class FigureController : MonoBehaviour
+public class FigureController : MonoBehaviour, IClickable
 {
     [SerializeField]
     private FigureBase _figure;
@@ -24,7 +24,7 @@ public class FigureController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    protected virtual void OnMouseDown()
+    public virtual void OnClick()
     {
         _rowController.Occupy(this);
 

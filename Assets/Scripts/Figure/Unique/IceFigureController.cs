@@ -50,12 +50,12 @@ public class IceFigureController : FigureController
         _spriteRenderer.DOFade(1f, 0.1f);
     }
 
-    protected override void OnMouseDown()
+    public override void OnClick()
     {
         if (_isFrozen)
             return;
 
-        base.OnMouseDown();
+        base.OnClick();
     }
 
     public override void OnRemove()

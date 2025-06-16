@@ -25,6 +25,8 @@ public class LevelController : MonoBehaviour
 
     private List<FigureBase> _uniqueVariants;
 
+    private bool _allowRecreation = true;
+
     [Inject]
     private SpawnManager _spawnManager;
 
@@ -41,6 +43,8 @@ public class LevelController : MonoBehaviour
         MakeUniqueFigures();
         CreateFiguresMix(_figuresCount, _maxForVariant);
         _spawnManager.StartSpawning(_figures);
+
+        EventBus.Instance.Subscribe(EventType.Defeat, new LocalEvent(() => { _allowRecreation = false; }));
     }
 
     public void ReloadLevel()
@@ -50,6 +54,8 @@ public class LevelController : MonoBehaviour
 
     public void Recreate()
     {
+        if (!_allowRecreation)
+            return;
         if (Figures.Count <= 0)
             return;
 
