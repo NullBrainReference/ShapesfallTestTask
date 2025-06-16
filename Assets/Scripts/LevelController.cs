@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Zenject;
 
@@ -40,6 +41,11 @@ public class LevelController : MonoBehaviour
         MakeUniqueFigures();
         CreateFiguresMix(_figuresCount, _maxForVariant);
         _spawnManager.StartSpawning(_figures);
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Recreate()
